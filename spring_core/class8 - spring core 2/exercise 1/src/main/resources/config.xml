@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    <bean class="com.herovired.Employee" name="employee1">-->
+    <!--        <property name="empId">-->
+    <!--            <value>101</value>-->
+    <!--        </property>-->
+    <!--        <property name="name">-->
+    <!--            <value>Mark</value>-->
+    <!--        </property>-->
+    <!--        <property name="email">-->
+    <!--            <value>mark@gmail.com</value>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+
+    <bean class="com.herovired.Employee" name="employee1">
+        <property name="empId" value="201"/>
+        <property name="name" value="Paul"/>
+        <property name="email" value="p@gmail.com"/>
+    </bean>
+
+    <bean class="com.herovired.Employee" name="employee2">
+        <property name="empId" value="301"/>
+        <property name="name" value="Smith"/>
+        <property name="email" value="s@gmail.com"/>
+    </bean>
+
+    <bean class="com.herovired.Employee" name="employee3" p:empId="401" p:name="John" p:email="j@gmail.com"/>
+
+    <bean class="com.herovired.Student" name="student1">
+        <property name="name" value="Stacy"/>
+        <property name="phones">
+            <list>
+                <value>999999</value>
+                <value>88888</value>
+                <value>77777</value>
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>Delhi</value>
+                <value>Mumbai</value>
+                <value>Goa</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="html" value="1month"/>
+                <entry key="css" value="2month"/>
+                <entry key="java" value="3month"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="com.herovired.Address" name="address1">
+        <property name="addressId" value="1"/>
+        <property name="houseNo" value="101"/>
+        <property name="city" value="delhi"/>
+    </bean>
+
+    <bean class="com.herovired.Customer" name="customer1">
+        <property name="custId" value="101"/>
+        <property name="name" value="Sachin"/>
+        <property name="address">
+            <ref bean="address1"/>
+        </property>
+    </bean>
+
+</beans>
