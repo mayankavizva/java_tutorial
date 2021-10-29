@@ -1,0 +1,6 @@
+Oct 30, 2021 12:29:05 AM com.refresher.Main main
+INFO: first input 10
+Oct 30, 2021 12:29:12 AM com.refresher.Main main
+INFO: Second input 20
+Oct 30, 2021 12:29:12 AM com.refresher.Main main
+INFO: result 30
